@@ -21,5 +21,22 @@ namespace petshop.Models
     public string Description { get; set; }
     public int Age { get; set; }
     public string Id { get; set; } = Guid.NewGuid().ToString();
+
+
+
+    public bool wasSet { get; set; }
+    private int _someInt;
+    public int someInt
+    {
+      get
+      {
+        return _someInt;
+      }
+      set
+      {
+        wasSet = true;
+        _someInt = value;
+      }
+    }
   }
 }
